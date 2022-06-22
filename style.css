@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(0, 87, 0);
+}
+/*espacio necesario*/
+#jugador, #computadora{
+    min-height: 400px;
+}
+
+/*Tamaño de las cartas*/
+img{
+    height: 300px;
+    width: 200px;
+    position: relative;
+    left: 140px;
+    margin-left:-140px ;
+}
+
+#mensajeGanador{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 60%;
+    height: 300px;
+    
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    line-height: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.482);
+    border-radius: 10px;
+    opacity: 0.9;
+}
+/*Clase que permite mostrar el mansaje al quitarla*/
+.hidden{
+    display: none;
+}
+
+/*Poner cuando se ponga el turno de la computadora*/
+.win{
+    background-color: green;
+}
+
+.lose{
+    background-color: red;
+}
