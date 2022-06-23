@@ -2,10 +2,10 @@ let baraja = [];
 let carta;
 let totalPuntosJugador = 0;
 let totalPuntosComputadora = 0;
-//declarar cuando se realice crearbaraja()
+
 const letrasss = ['J','Q','K','A'];
 
-//limpio
+
 function crearbaraja(){
     baraja=[];
     const numeros = [2, 3, 4, 5, 6, 7 ,8, 9 ,10];
@@ -28,7 +28,7 @@ function crearbaraja(){
     console.log(baraja);
 }
 
-//poner la propiedad cuando se pónga la primera linea
+
 function valor(carta){
     let valorCarta = carta.substring(0, carta.length - 1);
 
@@ -38,7 +38,7 @@ function valor(carta){
         return parseInt (valorCarta);
     }
 }
-//poner el turnocomputadora hasta el final
+
 function turnoJugador(){
     carta = baraja.shift();
     $('#cartasJugador').html($('#cartasJugador').html() + `<img src='./cartas/${carta}.png'>`); 
@@ -50,19 +50,19 @@ function turnoJugador(){
         turnoComputadora();
     }
 }
-//limpio
+
 $('#btn-card').click(function(){
     turnoJugador();
 });
 
-//checar si el id esta correcto
+
 function mensajeJugador(mensajeJugador){
     $('#mensajeGanador').text(mensajeJugador)
     $('#mensajeGanador').removeClass('hidden');
 }
 
 
-//asegurarse si ya se declaro la funcion del mensaje
+
 function turnoComputadora(){
     let ganaJugador = true;
     $('#mensajeGanador').addClass('lose');
@@ -101,7 +101,7 @@ $('#btn-stop').click(function(){
     
 });
 
-//limpio
+
 function nuevoJuego(){
     $('#cartasJugador').html('');
     $('#cartasComputadora').html('');
@@ -119,5 +119,5 @@ function nuevoJuego(){
 $('#btn-new').click(function(){
     nuevoJuego();
 });
-//ultima linea
+
 crearbaraja();
